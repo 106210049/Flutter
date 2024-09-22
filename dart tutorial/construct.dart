@@ -10,8 +10,32 @@ class Student {
   //   this.age = age;
   //   this.rollNumber = rollNumber;
   // }
-  Student(this.name, this.age, this.rollNumber);
+  // Parameterized Constructor In Dart:
+  // Student(this.name, this.age, this.rollNumber);
+  // Student() {
+  //   this.name = "Long";
+  // }
+  // Parameterized Constructor With Named Parameters In Dart
+  // Student({String? name, int? age, int? rollNumber}) {
+  //   this.name = name;
+  //   this.age = age;
+  //   this.rollNumber = rollNumber;
+  // }
 
+  // Student({String? name = "John", int? age = 0}) {
+  //   this.name = name;
+  //   this.age = age;
+  // }
+  Student() {
+    print("This is a default constructor");
+  }
+
+  // Named Constructor
+  Student.namedConstructor(String name, int age, int rollNumber) {
+    this.name = name;
+    this.age = age;
+    this.rollNumber = rollNumber;
+  }
   void enterValue() {
     print("Enter name:");
     this.name = stdin.readLineSync();
@@ -30,7 +54,9 @@ class Student {
 
 void main() {
   // Here student is object of class Student.
-  Student student = Student("John", 20, 1);
+  // Student student = Student("John", 19, 22);
+  Student student = Student.namedConstructor("John", 20, 1);
+
   student.display();
   student.enterValue();
   student.display();

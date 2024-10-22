@@ -5,11 +5,11 @@ class Student {
   int? age;
   int? rollNumber;
 
-  // Student(String name, int age, int rollNumber) {
-  //   this.name = name;
-  //   this.age = age;
-  //   this.rollNumber = rollNumber;
-  // }
+  Student(String name, int age, [int rollNumber = 12]) {
+    this.name = name;
+    this.age = age;
+    this.rollNumber = rollNumber;
+  }
   // Parameterized Constructor In Dart:
   // Student(this.name, this.age, this.rollNumber);
   // Student() {
@@ -26,16 +26,16 @@ class Student {
   //   this.name = name;
   //   this.age = age;
   // }
-  Student() {
-    print("This is a default constructor");
-  }
+  // Student() {
+  //   print("This is a default constructor");
+  // }
 
   // Named Constructor
-  Student.namedConstructor(String name, int age, int rollNumber) {
-    this.name = name;
-    this.age = age;
-    this.rollNumber = rollNumber;
-  }
+  // Student.namedConstructor(String name, int age, int rollNumber) {
+  //   this.name = name;
+  //   this.age = age;
+  //   this.rollNumber = rollNumber;
+  // }
   void enterValue() {
     print("Enter name:");
     this.name = stdin.readLineSync();
@@ -54,8 +54,8 @@ class Student {
 
 void main() {
   // Here student is object of class Student.
-  // Student student = Student("John", 19, 22);
-  Student student = Student.namedConstructor("John", 20, 1);
+  Student student = Student("John", 19);
+  // Student student = Student.namedConstructor("John", 20, 1);
 
   student.display();
   student.enterValue();

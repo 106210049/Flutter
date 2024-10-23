@@ -1,17 +1,13 @@
 // function that returns a stream
 Stream<String> getUserName() async* {
   await Future.delayed(Duration(seconds: 1));
-  yield 'Mark';
+  yield 'Long';
   await Future.delayed(Duration(seconds: 1));
-  yield 'John';
+  yield 'Trung';
   await Future.delayed(Duration(seconds: 1));
-  yield 'Smith';
+  yield 'Khang';
 }
 
-// function that returns a stream
-// Stream<String> getUserName() {
-//   return Stream.fromIterable(['Mark', 'John', 'Smith']);
-// }
 // main function
 void main() async {
   // you can use await for loop to get the value from stream

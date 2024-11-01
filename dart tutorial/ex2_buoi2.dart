@@ -8,9 +8,9 @@ void main() {
   print("a: $a");
   print("b: $b");
   print("c: $c");
-  a = 20;
-  b = 22;
-  c = 23;
+  // a = 20;
+  // b = 22;
+  // c = 23;
   print("a: $a");
   print("b: $b");
   print("c: $c");
